@@ -30,7 +30,7 @@ const GiftToys = () => {
             🍑 ⋆ 🎂 🎀 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 𝒢𝒾𝒻𝓉 🎀 🎂 ⋆ 🍑
           </h1>
         </div>
-        <div className="h-[500px] w-[500px] shadow-lg bg-gradient-to-r from-[#ffffff] to-[#ce0d0d]">
+        <div className="h-[500px] w-[500px] shadow-lg bg-gradient-to-r from-[#ffffff] to-[#f25f5f]">
           <img
             className="h-[300px] w-full"
             src="https://i.ibb.co/zJrFdT4/christmas-toy-background-23-2147996481.jpg"
