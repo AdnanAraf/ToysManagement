@@ -21,9 +21,9 @@ const ShopByCategory = () => {
             {/* <Tab>Math Toys</Tab>
             <Tab>Language Toys</Tab>
             <Tab>Engineering Toys</Tab> */}
-            {shopCategory.map((category, index) => (
-              <Tab key={index}>
-                <h1 className="text-center  text-[20px]">
+            {shopCategory.map((category) => (
+              <Tab key={category.id}>
+                <h1 className="text-center  text-[20px] cursor-pointer">
                   {category.category}
                 </h1>
               </Tab>
