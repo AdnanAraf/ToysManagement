@@ -74,7 +74,7 @@ const Login = () => {
         </form>
         <p className="text-center mt-[20px] ">
           <small>
-            New to ToyMasterClass?{" "}
+            New to ToyMasterClass?
             <Link to="/register">Create New Account</Link>
           </small>
         </p>
