@@ -1,4 +1,6 @@
+import { data } from "autoprefixer";
 import React from "react";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
   const handleAddBook = (event) => {
@@ -35,6 +37,14 @@ const AddToys = () => {
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
+    // if (data.insertedID) {
+    //   Swal.fire({
+    //     title: "Success!",
+    //     text: "Successfully AddedBook",
+    //     icon: "success",
+    //     confirmButtonText: "Cool",
+    //   });
+    // }
   };
 
   return (

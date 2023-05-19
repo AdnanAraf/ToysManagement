@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const [hover, setHover] = useState(false);
+  const Enter = () => {
+    setHover(true);
+  };
+  const Leave = () => {
+    setHover(false);
+  };
+
+  console.log(user?.name);
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="bg-blue-500">
       <div className="flex justify-between">
@@ -23,17 +39,27 @@ const Navbar = () => {
           <Link className="p-[20px]" to="/All Toys">
             All Toys
           </Link>
-          <Link className="p-[20px]" to="/My Toys">
-            My Toys
-          </Link>
+
           <Link className="p-[20px]" to="/Add a Toy">
             Add a Toy
           </Link>
+          {user?.email ? (
+            <>
+              <Link className="p-[20px]" to="/My Toys">
+                My Toys
+              </Link>
+
+              <Link className="p-[20px]" to="/login">
+                <button className="btn btn-success">Logout</button>
+              </Link>
+            </>
+          ) : (
+            <Link className="p-[20px]" to="/login">
+              <button className="btn btn-success">Login</button>
+            </Link>
+          )}
           <Link className="p-[20px]" to="/Blog">
             Blog
-          </Link>
-          <Link className="p-[20px]" to="/login">
-            <button className="btn btn-success">Login</button>
           </Link>
         </div>
       </div>
