@@ -8,10 +8,10 @@ const AddToys = () => {
     const form = event.target;
     const Toyname = form.name.value;
     const SellerName = form.sellername.value;
-    const Quantity = form.quantity.value;
+    const quantity = form.quantity.value;
     const email = form.email.value;
-    const Price = form.price.value;
-    const Rating = form.rating.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
     const category = form.category.value;
     const details = form.details.value;
     const photo = form.photo.value;
@@ -19,15 +19,15 @@ const AddToys = () => {
     const booking = {
       Toyname,
       SellerName,
-      Quantity,
+      quantity,
       email,
-      Price,
-      Rating,
+      price,
+      rating,
       category,
       details,
       photo,
     };
-    console.log(booking);
+    // console.log(booking);
     fetch("http://localhost:5000/ToysData", {
       method: "POST",
       headers: {

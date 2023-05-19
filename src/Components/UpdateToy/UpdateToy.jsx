@@ -4,8 +4,8 @@ import Swal from "sweetalert2";
 
 const UpdateToy = () => {
   const Updatedata = useLoaderData();
-  console.log(Updatedata);
-  const { _id, Toyname, Price, Quantity, details } = Updatedata;
+  // console.log(Updatedata);
+  const { _id, Toyname, price, quantity, details } = Updatedata;
 
   const handleUpdateToy = (event) => {
     event.preventDefault();
@@ -58,7 +58,7 @@ const UpdateToy = () => {
               <input
                 type="text"
                 name="price"
-                defaultValue={Price}
+                defaultValue={price}
                 placeholder="Price"
                 className="input input-bordered w-full"
               />
@@ -72,7 +72,7 @@ const UpdateToy = () => {
               <input
                 type="text"
                 name="quantity"
-                defaultValue={Quantity}
+                defaultValue={quantity}
                 placeholder="Available Quantity"
                 className="input input-bordered w-full"
               />

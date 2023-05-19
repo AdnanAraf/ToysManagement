@@ -16,7 +16,7 @@ const MyToys = () => {
       .then((data) => setbooking(data));
   }, []);
   const HandleDelete = (_id) => {
-    console.log(_id);
+    // console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -69,10 +69,10 @@ const MyToys = () => {
             </tr>
           </thead>
           <tbody>
-            {booking.map((booking) => (
+            {booking.map((bookings) => (
               <MyBookingTable
-                key={booking._id}
-                bookingData={booking}
+                key={bookings._id}
+                bookingData={bookings}
                 HandleDelete={HandleDelete}
                 //   handleBookingConfirm={handleBookingConfirm}
               ></MyBookingTable>
