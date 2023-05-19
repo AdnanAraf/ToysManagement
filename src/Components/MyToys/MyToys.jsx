@@ -1,19 +1,49 @@
 import React, { useContext, useEffect, useState } from "react";
 import MyBookingTable from "../BookingTable/MyBookingTable";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   const [booking, setbooking] = useState([]);
 
   const { user } = useContext(AuthContext);
 
-  const url = `http://localhost:5000/ToyData?email=${user.email}`;
+  const url = `http://localhost:5000/ToysData?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setbooking(data));
   }, []);
+  const HandleDelete = (_id) => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/ToysData/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your Toy has been deleted.", "success");
+              const remaining = booking.filter(
+                (bookings) => bookings._id !== _id
+              );
+              setbooking(remaining);
+            }
+          });
+      }
+    });
+  };
   return (
     <div>
       <div className="overflow-x-auto w-full">
@@ -43,7 +73,7 @@ const MyToys = () => {
               <MyBookingTable
                 key={booking._id}
                 bookingData={booking}
-                //   handleDelete={handleDelete}
+                HandleDelete={HandleDelete}
                 //   handleBookingConfirm={handleBookingConfirm}
               ></MyBookingTable>
             ))}

@@ -1,8 +1,12 @@
+import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const MyBookingTable = ({ bookingData }) => {
+const MyBookingTable = ({ bookingData, HandleDelete }) => {
   console.log(bookingData);
   const {
+    _id,
     Price,
     Quantity,
     SellerName,
@@ -17,7 +21,10 @@ const MyBookingTable = ({ bookingData }) => {
   return (
     <tr>
       <th>
-        <button className="btn btn-sm btn-circle">
+        <button
+          onClick={() => HandleDelete(_id)}
+          className="btn btn-sm btn-circle"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -33,6 +40,9 @@ const MyBookingTable = ({ bookingData }) => {
             />
           </svg>
         </button>
+        <Link to={`/UpdateToy/${_id}`}>
+          <FontAwesomeIcon className="ml-[30px] mt-[-40px]" icon={faPen} />
+        </Link>
       </th>
       <td>
         <div className="avatar">
@@ -47,7 +57,7 @@ const MyBookingTable = ({ bookingData }) => {
       <td>{Rating}</td>
       <td>{category}</td>
       <td>{details}</td>
-      <img src={photo}></img>
+      <img className="h-[200px] w-[200px]" src={photo}></img>
     </tr>
   );
 };

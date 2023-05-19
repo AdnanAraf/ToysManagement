@@ -4,18 +4,10 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [hover, setHover] = useState(false);
-  const Enter = () => {
-    setHover(true);
-  };
-  const Leave = () => {
-    setHover(false);
-  };
 
-  console.log(user?.name);
   const handleLogOut = () => {
     logOut()
-      .then()
+      .then(() => {})
       .catch((error) => console.log(error));
   };
   return (
@@ -49,9 +41,9 @@ const Navbar = () => {
                 My Toys
               </Link>
 
-              <Link className="p-[20px]" to="/login">
-                <button className="btn btn-success">Logout</button>
-              </Link>
+              <button onClick={handleLogOut} className="btn btn-success">
+                Logout
+              </button>
             </>
           ) : (
             <Link className="p-[20px]" to="/login">
