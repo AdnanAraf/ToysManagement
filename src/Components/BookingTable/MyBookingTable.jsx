@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MyBookingTable = ({ bookingData, HandleDelete }) => {
-  console.log(bookingData);
+  // console.log(bookingData);
   const {
     _id,
     Price,
