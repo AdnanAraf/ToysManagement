@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const AllToys = () => {
-  return (
-    <div>
-      <h1>All Toys</h1>
-    </div>
-  );
+  const [AllToys, setalltoys] = useState([]);
+  return <div></div>;
 };
 
 export default AllToys;

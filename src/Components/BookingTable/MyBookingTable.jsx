@@ -4,11 +4,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MyBookingTable = ({ bookingData, HandleDelete }) => {
-  // console.log(bookingData);
+  console.log(bookingData);
   const {
     _id,
-    Price,
-    Quantity,
+    price,
+    quantity,
     SellerName,
     Rating,
     Toyname,
@@ -52,8 +52,8 @@ const MyBookingTable = ({ bookingData, HandleDelete }) => {
       <td>{Toyname}</td>
       <td>{SellerName}</td>
       <td>{email}</td>
-      <td>{Quantity}</td>
-      <td>{Price}</td>
+      <td>{quantity}</td>
+      <td>{price}</td>
       <td>{Rating}</td>
       <td>{category}</td>
       <td>{details}</td>

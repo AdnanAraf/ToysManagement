@@ -13,17 +13,16 @@ const UpdateToy = () => {
     const form = event.target;
 
     const name = form.name.value;
-    const Quantity = form.quantity.value;
-    const Price = form.price.value;
+    const quantity = form.quantity.value;
+    const price = form.price.value;
     const details = form.details.value;
 
     const updatedToys = {
-      name,
-      Quantity,
-      Price,
+      quantity,
+      price,
       details,
     };
-
+    console.log(updatedToys);
     // send data to the server
     fetch(`http://localhost:5000/ToysData/${_id}`, {
       method: "PUT",
@@ -38,7 +37,7 @@ const UpdateToy = () => {
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
-            text: "Coffee Updated Successfully",
+            text: "Toys Updated Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
