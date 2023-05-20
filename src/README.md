@@ -1,15 +1,15 @@
 ### Adnan Araf
 
--This is Educational and Learning Toys
+- This is Educational and Learning Toys
 
--This Website name ToyMasterClass
+- This Website name ToyMasterClass
 
--Here is a navbar , Template , ShopCategory, Gallery , Gift Toys,Our Customer's Review,Footer.
+- Here is a navbar , Template , ShopCategory, Gallery , Gift Toys,Our Customer's Review,Footer.
 
--This Navbar has Home , All Toys , Add Toys My Toys , Blog.
+- This Navbar has Home , All Toys , Add Toys My Toys , Blog.
 
--All types of toys can be found in the All Toys section .
+- All types of toys can be found in the All Toys section .
 
--Any toy can be added in add toys section .
+- Any toy can be added in add toys section .
 
--User logs in, they will see the My Toys Page.
+- User logs in, they will see the My Toys Page.
