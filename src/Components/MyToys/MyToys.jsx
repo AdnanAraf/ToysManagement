@@ -8,13 +8,13 @@ const MyToys = () => {
 
   const { user } = useContext(AuthContext);
 
-  const url = `http://localhost:5000/ToysData?email=${user?.email}`;
+  const url = `http://localhost:5000/myToys/${user?.email}`;
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setbooking(data));
-  }, []);
+  }, [user]);
   const HandleDelete = (_id) => {
     // console.log(_id);
     Swal.fire({
