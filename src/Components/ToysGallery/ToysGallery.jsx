@@ -6,7 +6,7 @@ const ToysGallery = () => {
       <div className=" h-[100px]">
         <h1 className="text-center text-[50px] font-bold ">Our Gallery</h1>
       </div>
-      <div className="grid grid-cols-3 gap-[20px] m-[50px] ">
+      <div className="lg:grid lg:grid-cols-3 grid grid-cols-1 gap-[20px] m-[50px] ">
         <img
           className="h-[400px] w-[400px] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
           src="https://i.ibb.co/wL8L5R9/hand-drawn-science-education-background-theme-23-2148510134.jpg"

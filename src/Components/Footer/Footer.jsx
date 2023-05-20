@@ -13,13 +13,13 @@ const Footer = () => {
           ></img>
         </div>
         <div>
-          <h1 className="text-white mt-[10px] font-bold text-[40px]">
+          <h1 className="text-white mt-[10px] font-bold lg:text-[40px] text-[30px]">
             𝔗𝔬𝔶𝔐𝔞𝔰𝔱𝔢𝔯ℭ𝔩𝔞𝔰𝔰
           </h1>
         </div>
       </div>
       <div>
-        <div className="flex justify-evenly">
+        <div className="lg:flex justify-evenly text-center lg:text-[]">
           <div>
             <h1 className="text-white text-[25px] font-bold">Contact info</h1>
             <p className="font-semibold text-yellow-300">+73634982739</p>
@@ -34,16 +34,16 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex ">
+          <div className="flex lg:ml-[0px] ml-[40px]">
             <Link to="https://www.facebook.com/">
-              <FaFacebook className="lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px]  text-blue-500 " />
+              <FaFacebook className="lg:h-[50px] lg:w-[50px] h-[50px] w-[50px] m-[20px]  text-blue-500 " />
             </Link>
             <Link to="https://www.youtube.com/">
-              <FaYoutube className=" lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px] text-red-700" />
+              <FaYoutube className=" lg:h-[50px] lg:w-[50px] h-[50px] w-[50px] m-[20px] text-red-700" />
             </Link>
 
             <Link to="https://www.linkedin.com/in/adnan-araf-554483202/">
-              <FaLinkedinIn className="lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px] text-[#0e76a8]" />
+              <FaLinkedinIn className="lg:h-[50px] lg:w-[50px] h-[50px] w-[50px] m-[20px] text-[#0e76a8]" />
             </Link>
           </div>
         </div>

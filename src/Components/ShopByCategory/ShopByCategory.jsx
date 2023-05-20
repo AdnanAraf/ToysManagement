@@ -13,7 +13,7 @@ const ShopByCategory = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-t via-yellow-300 from-blue-400    to-green-500 h-[700px]">
+    <div className="bg-gradient-to-t via-yellow-300 from-blue-400    to-green-500 lg:h-[700px]">
       <div>
         <h2 className="text-center font-bold text-[50px]">Shop by Category</h2>
 
@@ -35,10 +35,10 @@ const ShopByCategory = () => {
             <TabPanel key={index}>
               <div className="toy-container">
                 <div className="toy-card">
-                  <div className="flex justify-between">
+                  <div className="lg:flex justify-between">
                     <div>
                       <img
-                        className="h-[300px] w-[600px]"
+                        className="lg:h-[300px] lg:w-[600px]"
                         src={category.image}
                       />
                       <h4 className="text-center font-bold text-[25px]">
@@ -51,7 +51,7 @@ const ShopByCategory = () => {
                         Rating: {category.rating}
                       </p>
                       <Link to={`/shopdetails/${category.id}`}>
-                        <button className="btn btn-success ml-[240px]">
+                        <button className="btn btn-success lg:ml-[240px] ml-[120px]">
                           View Details
                         </button>
                       </Link>
@@ -71,7 +71,7 @@ const ShopByCategory = () => {
                       <p className="text-center text-[18px]">
                         Rating: {category.rating2}
                       </p>
-                      <button className="btn btn-success ml-[240px]">
+                      <button className="btn btn-success lg:ml-[240px] ml-[120px]">
                         View Details
                       </button>
                     </div>
