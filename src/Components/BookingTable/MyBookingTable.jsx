@@ -53,7 +53,7 @@ const MyBookingTable = ({ bookingData, HandleDelete }) => {
       <td>{SellerName}</td>
       <td>{email}</td>
       <td>{quantity}</td>
-      <td>{price}</td>
+      <td>{parseInt(price)}</td>
       <td>{Rating}</td>
       <td>{category}</td>
       <td>{details}</td>

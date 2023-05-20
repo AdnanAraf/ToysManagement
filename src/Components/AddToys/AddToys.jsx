@@ -123,7 +123,7 @@ const AddToys = () => {
               </label>
               <label className="input-group">
                 <input
-                  type="text"
+                  type="number"
                   name="price"
                   placeholder="price"
                   className="input input-bordered w-full"
