@@ -14,6 +14,7 @@ import UpdateToy from "../UpdateToy/UpdateToy";
 import SingleToysDetails from "../SingleToysDetails/SingleToysDetails";
 import ShopCategoryDetails from "../ShopcategoryDetails/ShopCategoryDetails";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import Home from "../Home/Home";
 
 const Routes = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <Home2 />,
+      },
+      {
+        path: "home",
+        element: <Home />,
       },
       {
         path: "Blog",
