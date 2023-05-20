@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SubcategoryCard from "../SubcategoryCard/SubcategoryCard";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { Link } from "react-router-dom";
 
 const ShopByCategory = () => {
   const [shopCategory, setShopCategory] = useState([]);
@@ -49,9 +50,11 @@ const ShopByCategory = () => {
                       <p className="text-center text-[18px]">
                         Rating: {category.rating}
                       </p>
-                      <button className="btn btn-success ml-[240px]">
-                        View Details
-                      </button>
+                      <Link to={`/shopdetails/${category.id}`}>
+                        <button className="btn btn-success ml-[240px]">
+                          View Details
+                        </button>
+                      </Link>
                     </div>
 
                     <div>

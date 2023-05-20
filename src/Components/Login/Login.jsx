@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import SocialLoginBtn from "../SocialLoginBtn/SocialLoginBtn";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
@@ -79,6 +80,9 @@ const Login = () => {
           </small>
         </p>
         <p className=" text-red-400 font-bold text-center">{error}</p>
+        <div className="mt-[80px] ml-[50px]">
+          <SocialLoginBtn />
+        </div>
       </div>
       <div className="col-md-6 ">
         <img

@@ -12,11 +12,14 @@ import AddToys from "../AddToys/AddToys";
 import PrivateRoute from "../Private/PrivateRoute";
 import UpdateToy from "../UpdateToy/UpdateToy";
 import SingleToysDetails from "../SingleToysDetails/SingleToysDetails";
+import ShopCategoryDetails from "../ShopcategoryDetails/ShopCategoryDetails";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const Routes = createBrowserRouter([
   {
     path: "/",
     element: <Home1 />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -70,6 +73,11 @@ const Routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/ToysData/${params.id}`),
+      },
+      {
+        path: "shopdetails/:id",
+        element: <ShopCategoryDetails />,
+        loader: ({ params }) => fetch(`FakeData.json/${params.id}`),
       },
     ],
   },
