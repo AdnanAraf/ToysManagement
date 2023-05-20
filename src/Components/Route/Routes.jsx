@@ -82,7 +82,7 @@ const Routes = createBrowserRouter([
       {
         path: "shopdetails/:id",
         element: <ShopCategoryDetails />,
-        loader: ({ params }) => fetch(`FakeData.json/${params.id}`),
+        loader: ({ params }) => fetch(`/FakeData.json/${params.id}`),
       },
     ],
   },

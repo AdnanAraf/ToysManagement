@@ -38,17 +38,20 @@ const Navbar = () => {
           <Link className="p-[20px]" to="/Add a Toy">
             Add a Toy
           </Link>
-          <div className="tooltip lg:mt-[30px]" data-tip={user?.email}>
-            {/* <button className="btn">Hover me</button> */}
-            <FaUserCircle style={{ fontSize: "2rem" }}></FaUserCircle>
-          </div>
+
           {user?.email ? (
             <>
               <Link className="lg:p-[20px]" to="/My Toys">
                 My Toys
               </Link>
-
-              <button onClick={handleLogOut} className="btn btn-success">
+              <div className="tooltip lg:mt-[30px]" data-tip={user?.email}>
+                {/* <button className="btn">Hover me</button> */}
+                <FaUserCircle style={{ fontSize: "2rem" }}></FaUserCircle>
+              </div>
+              <button
+                onClick={handleLogOut}
+                className="btn btn-success ml-[20px]"
+              >
                 Logout
               </button>
             </>

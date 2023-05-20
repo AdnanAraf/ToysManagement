@@ -57,7 +57,7 @@ const ShopByCategory = () => {
                       </Link>
                     </div>
 
-                    <div>
+                    {/* <div>
                       <img
                         className="h-[300px] w-[600px]"
                         src={category.image2}
@@ -74,7 +74,7 @@ const ShopByCategory = () => {
                       <button className="btn btn-success lg:ml-[240px] ml-[120px]">
                         View Details
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

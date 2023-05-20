@@ -1,8 +1,10 @@
 import { data } from "autoprefixer";
-import React from "react";
+import React, { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const AddToys = () => {
+  const { user } = useContext(AuthContext);
   const handleAddBook = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -78,6 +80,7 @@ const AddToys = () => {
                   type="text"
                   name="sellername"
                   placeholder="Seller Name"
+                  // defaultValue={user.name}
                   className="input input-bordered w-full"
                   required
                 />
@@ -94,7 +97,7 @@ const AddToys = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Enter your Email"
+                  defaultValue={user?.email}
                   className="input input-bordered w-full"
                 />
               </label>

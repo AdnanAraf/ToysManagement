@@ -1,21 +1,29 @@
 import React, { useState } from "react";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SocialLoginBtn = () => {
   const [user, setUser] = useState({});
+  const [error, seterror] = useState("");
+  const [loading, setloading] = useState(true);
   const auth = getAuth(app);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  console.log(from);
   const googleProvider = new GoogleAuthProvider();
   const handleGoogleLogin = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
+        setloading(true);
         setUser(user);
         console.log(user);
+        navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage);
       });
   };
   return (
