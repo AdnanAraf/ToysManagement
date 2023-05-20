@@ -35,8 +35,13 @@ const Footer = () => {
           </div>
 
           <div className="flex ">
-            <FaFacebook className="lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px]  text-blue-500 " />
-            <FaYoutube className=" lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px] text-red-700" />
+            <Link to="https://www.facebook.com/">
+              <FaFacebook className="lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px]  text-blue-500 " />
+            </Link>
+            <Link to="https://www.youtube.com/">
+              <FaYoutube className=" lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px] text-red-700" />
+            </Link>
+
             <Link to="https://www.linkedin.com/in/adnan-araf-554483202/">
               <FaLinkedinIn className="lg:h-[50px] lg:w-[50px] h-[100px] w-[100px] m-[20px] text-[#0e76a8]" />
             </Link>
