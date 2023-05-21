@@ -7,7 +7,7 @@ const ShopByCategory = () => {
   const [shopCategory, setShopCategory] = useState([]);
 
   useEffect(() => {
-    fetch("https://toys-server-adnanaraf.vercel.app/ShopsCategoryCollection")
+    fetch("FakeData.json")
       .then((res) => res.json())
       .then((data) => setShopCategory(data));
   }, []);
@@ -15,7 +15,9 @@ const ShopByCategory = () => {
   return (
     <div className="bg-gradient-to-t via-yellow-300 from-blue-400    to-green-500 lg:h-[700px]">
       <div>
-        <h2 className="text-center font-bold text-[50px]">Shop by Category</h2>
+        <h2 className="text-center font-bold text-[50px]" data-aos="flip-left">
+          Shop by Category
+        </h2>
 
         <Tabs>
           <TabList>
@@ -50,7 +52,7 @@ const ShopByCategory = () => {
                       <p className="text-center text-[18px]">
                         Rating: {category.rating}
                       </p>
-                      <Link to={`shopdetails/${category._id}`}>
+                      <Link to={`/shopdetails/${category._id}`}>
                         <button className="btn btn-success lg:ml-[240px] ml-[120px]">
                           View Details
                         </button>
@@ -71,9 +73,11 @@ const ShopByCategory = () => {
                       <p className="text-center text-[18px]">
                         Rating: {category.rating2}
                       </p>
-                      <button className="btn btn-success lg:ml-[240px] ml-[120px]">
-                        View Details
-                      </button>
+                      <Link to={`/shopdetails/${category._id}`}>
+                        <button className="btn btn-success lg:ml-[240px] ml-[120px]">
+                          View Details
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

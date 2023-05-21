@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const MyToys = () => {
   const [booking, setbooking] = useState([]);
-
+  const [sortOrder, setSortOrder] = useState("ascending");
   const { user } = useContext(AuthContext);
 
   const url = `https://toys-server-adnanaraf.vercel.app/myToys/${user?.email}`;
@@ -44,9 +44,27 @@ const MyToys = () => {
       }
     });
   };
+  const handleSort = () => {
+    const sortedBooking = [...booking];
+    if (sortOrder === "ascending") {
+      sortedBooking.sort((a, b) => a.price - b.price);
+      setSortOrder("descending");
+    } else {
+      sortedBooking.sort((a, b) => b.price - a.price);
+      setSortOrder("ascending");
+    }
+    setbooking(sortedBooking);
+  };
   return (
     <div>
       <div className="overflow-x-auto w-full">
+        <button
+          onClick={handleSort}
+          className="btn btn-success mx-[600px] my-[50px]"
+        >
+          Sort By Price
+        </button>
+
         <table className="table w-full">
           {/* head */}
           <thead>

@@ -39,14 +39,14 @@ const AddToys = () => {
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
-    // if (data.insertedID) {
-    //   Swal.fire({
-    //     title: "Success!",
-    //     text: "Successfully AddedBook",
-    //     icon: "success",
-    //     confirmButtonText: "Cool",
-    //   });
-    // }
+    if (data.insertedID) {
+      Swal.fire({
+        title: "Success!",
+        text: "Successfully AddedBook",
+        icon: "success",
+        confirmButtonText: "Cool",
+      });
+    }
   };
 
   return (

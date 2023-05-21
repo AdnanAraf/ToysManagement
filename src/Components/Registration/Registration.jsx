@@ -10,9 +10,9 @@ const Registration = () => {
   const [photo, setPhoto] = useState("");
   const [error, setError] = useState("");
 
-  const handlePhotoUrlChange = (event) => {
-    setPhoto(event.target.value);
-  };
+  // const handlePhotoUrlChange = (event) => {
+  //   setPhoto(event.target.value);
+  // };
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
