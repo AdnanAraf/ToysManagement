@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SubcategoryCard from "../SubcategoryCard/SubcategoryCard";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Link } from "react-router-dom";
-// console.log(Araf);
+
 const ShopByCategory = () => {
   const [shopCategory, setShopCategory] = useState([]);
 
