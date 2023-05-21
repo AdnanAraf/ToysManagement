@@ -59,7 +59,9 @@ const Routes = createBrowserRouter([
         path: "UpdateToy/:id",
         element: <UpdateToy />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/ToysData/${params.id}`),
+          fetch(
+            `https://toys-server-adnanaraf.vercel.app/ToysData/${params.id}`
+          ),
       },
       {
         path: "Add a Toy",
@@ -77,12 +79,21 @@ const Routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/ToysData/${params.id}`),
+          fetch(
+            `https://toys-server-adnanaraf.vercel.app/ToysData/${params.id}`
+          ),
       },
       {
-        path: "shopdetails/:id",
-        element: <ShopCategoryDetails />,
-        loader: ({ params }) => fetch(`/FakeData.json/${params.id}`),
+        path: "/shopdetails/:id",
+        element: (
+          <PrivateRoute>
+            <ShopCategoryDetails />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://toys-server-adnanaraf.vercel.app/ShopsCategoryCollection/${params.id}`
+          ),
       },
     ],
   },

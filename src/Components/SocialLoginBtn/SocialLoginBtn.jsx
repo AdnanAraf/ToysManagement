@@ -19,8 +19,8 @@ const SocialLoginBtn = () => {
         const user = result.user;
         setloading(true);
         setUser(user);
-        console.log(user);
-        navigate("/");
+        // console.log(user);
+        navigate(from);
       })
       .catch((error) => {
         const errorMessage = error.message;

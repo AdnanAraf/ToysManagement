@@ -5,7 +5,11 @@
     "image": "https://i.ibb.co/C8C9H1t/detailed-illustration-mathematical-place-value-abacus-1308-2489-removebg-preview.png",
     "name": "Number Blocks Set",
     "price": "19.99",
-    "rating": "4.5"
+    "rating": "4.5",
+    "image2": "https://i.ibb.co/SKrPTwD/colourful-math-numbers-infinite-numbers-with-fractions-23-2148416074.jpg",
+    "name2": "Number Play",
+    "price2": 20,
+    "rating2": 4.5
   },
 
   {
@@ -14,7 +18,11 @@
     "image": "https://i.ibb.co/1RVfJj0/3d-illustration-children-s-toy-cubes-with-letters-23-2149345296-removebg-preview.png",
     "name": "Letter Blocks",
     "price": "16.99",
-    "rating": "4.7"
+    "rating": "4.7",
+    "image2": "https://i.ibb.co/m6sTg9C/letters-wood-cubes-transparent-psd-7939-3428.jpg",
+    "name2": "Alphabet",
+    "price2": 10,
+    "rating2": 5.0
   },
 
   {
@@ -23,6 +31,9 @@
     "image": "https://i.ibb.co/G2x2nrk/stem-education-logo-with-icon-ornament-elements-1308-66016-removebg-preview.png",
     "name": "STEM Building Set",
     "price": "29.99",
-    "rating": "4.8"
+    "rating": "4.8",
+    "image2": "https://i.ibb.co/B2bV41d/children-fixing-robot-together-1308-77993.jpg",
+    "name2": "Robotic",
+    "price2": 40
   }
 ]

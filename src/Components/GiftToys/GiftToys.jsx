@@ -4,13 +4,18 @@ const GiftToys = () => {
   return (
     <div>
       <div>
-        <h1 className="text-center font-bold text-[50px]">Gift Toys</h1>
+        <h1 className="text-center font-bold text-[50px]" data-aos="flip-left">
+          Gift Toys
+        </h1>
         <img
           className="lg:mx-[400px]  lg:w-[800px] lg:mt-[30px]"
           src="https://i.ibb.co/7Wvr4bD/toy-train.png"
         ></img>
       </div>
-      <div className="lg:grid lg:grid-cols-3 grid grid-cols-1 mt-[70px] gap-[20px] overflow-hidden">
+      <div
+        className="lg:grid lg:grid-cols-3 grid grid-cols-1 mt-[70px] gap-[20px] overflow-hidden"
+        data-aos="fade-up-right"
+      >
         <div className="lg:h-[500px] lg:w-[500px] shadow-lg bg-gradient-to-r from-green-500 to-blue-100">
           <img
             className="h-[300px] w-full"

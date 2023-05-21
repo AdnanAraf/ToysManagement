@@ -7,16 +7,18 @@ const AllToys = () => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/ToysData")
+    fetch("https://toys-server-adnanaraf.vercel.app/ToysData")
       .then((res) => res.json())
       .then((data) => setalltoys(data));
   }, []);
 
   const handleSearch = () => {
-    fetch(`http://localhost:5000/getJobsByText/${searchText}`)
+    fetch(
+      `https://toys-server-adnanaraf.vercel.app/getJobsByText/${searchText}`
+    )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setalltoys(data);
       });
   };

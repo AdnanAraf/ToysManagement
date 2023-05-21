@@ -4,11 +4,19 @@ const CustomersReview = () => {
   return (
     <div>
       <div>
-        <h1 className="text-center text-[50px] mt-[50px] font-bold">
+        <h1
+          className="text-center text-[50px] mt-[50px] font-bold"
+          data-aos="flip-left"
+        >
           Our Customer's <span className="">Review</span>
         </h1>
       </div>
-      <div className="lg:grid lg:grid-cols-3 lg:m-[50px] grid grid-cols-1">
+      <div
+        className="lg:grid lg:grid-cols-3 lg:m-[50px] grid grid-cols-1"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <div className="lg:h-[400px] lg:w-[400px] shadow-lg">
           <img
             className="rounded-full h-[100px] w-[100px] m-auto"

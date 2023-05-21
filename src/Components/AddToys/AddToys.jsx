@@ -30,7 +30,7 @@ const AddToys = () => {
       photo,
     };
     // console.log(booking);
-    fetch("http://localhost:5000/ToysData", {
+    fetch("https://toys-server-adnanaraf.vercel.app/ToysData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

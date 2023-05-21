@@ -7,7 +7,7 @@ const ShopByCategory = () => {
   const [shopCategory, setShopCategory] = useState([]);
 
   useEffect(() => {
-    fetch("FakeData.json")
+    fetch("https://toys-server-adnanaraf.vercel.app/ShopsCategoryCollection")
       .then((res) => res.json())
       .then((data) => setShopCategory(data));
   }, []);
@@ -23,7 +23,7 @@ const ShopByCategory = () => {
             <Tab>Language Toys</Tab>
             <Tab>Engineering Toys</Tab> */}
             {shopCategory.map((category) => (
-              <Tab key={category.id}>
+              <Tab key={category._id}>
                 <h1 className="text-center  text-[20px] cursor-pointer">
                   {category.category}
                 </h1>
@@ -50,14 +50,14 @@ const ShopByCategory = () => {
                       <p className="text-center text-[18px]">
                         Rating: {category.rating}
                       </p>
-                      <Link to={`/shopdetails/${category.id}`}>
+                      <Link to={`shopdetails/${category._id}`}>
                         <button className="btn btn-success lg:ml-[240px] ml-[120px]">
                           View Details
                         </button>
                       </Link>
                     </div>
 
-                    {/* <div>
+                    <div>
                       <img
                         className="h-[300px] w-[600px]"
                         src={category.image2}
@@ -74,7 +74,7 @@ const ShopByCategory = () => {
                       <button className="btn btn-success lg:ml-[240px] ml-[120px]">
                         View Details
                       </button>
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>
