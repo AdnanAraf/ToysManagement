@@ -60,7 +60,7 @@ const MyToys = () => {
       <div className="overflow-x-auto w-full">
         <button
           onClick={handleSort}
-          className="btn btn-success mx-[600px] my-[50px]"
+          className="btn btn-success mx-[600px] my-[20px]"
         >
           Sort By Price
         </button>

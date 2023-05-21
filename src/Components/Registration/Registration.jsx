@@ -35,6 +35,7 @@ const Registration = () => {
       );
       return;
     }
+    setPhoto(photo);
     if ((name, email, password)) {
       registerUser(email, password)
         .then((result) => {
