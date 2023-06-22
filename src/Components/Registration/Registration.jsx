@@ -26,12 +26,12 @@ const Registration = () => {
     const password = form.password.value;
 
     if (
-      !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(
-        password
-      )
+      password.length < 6 ||
+      /[A-Z]/.test(password) ||
+      /[^a-zA-Z0-9]/.test(password)
     ) {
       setError(
-        "Minimum eight characters, at least one letter, one number and one special character"
+        "Password must be less than 6 characters and should not contain capital letters or special characters."
       );
       return;
     }
@@ -130,13 +130,6 @@ const Registration = () => {
           </small>
         </p>
         <p className=" text-red-400 font-bold text-center">{error}</p>
-      </div>
-      <div className="col-md-6">
-        <img
-          className="w-100"
-          src="https://i.ibb.co/fp3x0mv/sign-up-concept-illustration-114360-7965-removebg-preview.png"
-          alt=""
-        />
       </div>
     </div>
   );
